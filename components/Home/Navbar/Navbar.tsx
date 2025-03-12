@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { GiBookshelf } from "react-icons/gi";
 import { FaCloudArrowDown } from "react-icons/fa6";
 import { CgMenu } from "react-icons/cg";
-import { IoClose, IoMoonOutline } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
 import ThemeToggle from "@/components/Helper/ThemeToggle";
 
 const Navbar: React.FC = () => {
@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
   // Ferme le menu mobile si l'écran dépasse 1024px
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) {
+      if (window.innerWidth >= 1284) {
         setIsMenuOpen(false);
       }
     };
@@ -34,8 +34,8 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-white shadow-lg px-6 py-3 flex items-center justify-between z-50">
-      <div className="container mx-auto flex items-center justify-between">
+    <div className="transition-all duration-200 h-[12vh] z-[100] w-full">
+      <div className="flex items-center h-full justify-between w-[90%] mx-auto">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <GiBookshelf size={32} className="text-orange-600" />
@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Desktop Navigation et Boutons */}
-        <div className="hidden lg:flex items-center justify-between w-full">
+        <div className="hidden xl:flex items-center justify-between w-full">
           {/* Navlinks centrés */}
           <div className="flex-1 flex justify-center space-x-8">
             {navLinks.map((link) => (
@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Boutons */}
-          <div className="flex items-center">
+          <div className="flex items-center space-x-4">
             <button className="flex items-center bg-orange-500 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-600 transition">
               <FaCloudArrowDown className="mr-2" />
               Download
@@ -71,10 +71,8 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Icônes pour mobile */}
-        <div className="lg:hidden flex items-center space-x-4">
-          <button className="bg-gray-500 text-white p-2 rounded-full">
-            <IoMoonOutline size={20} />
-          </button>
+        <div className="xl:hidden flex items-center space-x-4">
+            <ThemeToggle/>
           <CgMenu
             size={28}
             className="text-gray-700 cursor-pointer"
