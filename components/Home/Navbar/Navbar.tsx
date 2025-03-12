@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { GrTechnology } from "react-icons/gr";
+import { GiBookshelf } from "react-icons/gi";
 import { FaCloudArrowDown } from "react-icons/fa6";
 import { CgMenu } from "react-icons/cg";
 import { IoClose, IoMoonOutline } from "react-icons/io5";
@@ -23,42 +23,50 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
-  const navLinks = ["Home", "About", "Benefits", "Courses", "Testimonials", "Contact"];
+  const navLinks = [
+    "Home",
+    "About",
+    "Benefits",
+    "Courses",
+    "Testimonials",
+    "Contact",
+  ];
 
   return (
     <div className="fixed top-0 left-0 w-full bg-white shadow-lg px-6 py-3 flex items-center justify-between z-50">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <GrTechnology size={24} className="text-blue-500" />
+          <GiBookshelf size={24} className="text-blue-500" />
           <span className="font-bold text-blue-500 text-lg">Books_Vibes</span>
         </div>
 
         {/* Desktop Navigation et Boutons */}
         <div className="hidden lg:flex items-center justify-between w-full">
-          {/* Liens de navigation */}
-          <div className="flex space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
-                className="text-gray-700 hover:text-blue-500 transition font-medium"
-              >
-                {link}
-              </a>
-            ))}
-          </div>
-          {/* Boutons Download et Moon */}
-          <div className="flex items-center">
-            <button className="flex items-center bg-orange-500 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-600 transition">
-              <FaCloudArrowDown className="mr-2" />
-              Download
-            </button>
-            <button className="ml-4 bg-gray-500 text-white p-2 rounded-full">
-              <IoMoonOutline size={20} />
-            </button>
-          </div>
-        </div>
+  {/* Navlinks centrés */}
+  <div className="flex-1 flex justify-center space-x-8">
+    {navLinks.map((link) => (
+      <a
+        key={link}
+        href={`#${link.toLowerCase()}`}
+        className="text-gray-700 hover:text-blue-500 transition font-medium"
+      >
+        {link}
+      </a>
+    ))}
+  </div>
+
+  {/* Boutons */}
+  <div className="flex items-center">
+    <button className="flex items-center bg-orange-500 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-600 transition">
+      <FaCloudArrowDown className="mr-2" />
+      Download
+    </button>
+    <button className="ml-4 bg-gray-500 text-white p-2 rounded-full">
+      <IoMoonOutline size={20} />
+    </button>
+  </div>
+</div>
 
         {/* Icônes pour mobile */}
         <div className="lg:hidden flex items-center space-x-4">
@@ -79,8 +87,10 @@ const Navbar: React.FC = () => {
           {/* En-tête du menu mobile */}
           <div className="flex items-center justify-between w-full mb-8">
             <div className="flex items-center space-x-2">
-              <GrTechnology size={24} className="text-blue-500" />
-              <span className="font-bold text-blue-500 text-lg">Books_Vibes</span>
+              <GiBookshelf size={24} className="text-blue-500" />
+              <span className="font-bold text-blue-500 text-lg">
+                Books_Vibes
+              </span>
             </div>
             <IoClose
               size={28}
@@ -103,7 +113,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Bouton Download centré */}
-          <button className="mt-8 flex items-center bg-orange-500 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-600 transition self-center">
+          <button className="mt-8 flex items-center bg-orange-500 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-600 transition self-center w-[60%]">
             <FaCloudArrowDown className="mr-2" />
             Download
           </button>
