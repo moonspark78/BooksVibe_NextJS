@@ -5,6 +5,7 @@ import { GiBookshelf } from "react-icons/gi";
 import { FaCloudArrowDown } from "react-icons/fa6";
 import { CgMenu } from "react-icons/cg";
 import { IoClose, IoMoonOutline } from "react-icons/io5";
+import ThemeToggle from "@/components/Helper/ThemeToggle";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,9 +66,7 @@ const Navbar: React.FC = () => {
               <FaCloudArrowDown className="mr-2" />
               Download
             </button>
-            <button className="ml-4 bg-gray-500 text-white p-2 rounded-full">
-              <IoMoonOutline size={20} />
-            </button>
+            <ThemeToggle/>
           </div>
         </div>
 
