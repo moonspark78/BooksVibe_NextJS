@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
           <GiBookshelf size={32} className="text-orange-600" />
           <h1 className="text-xl sm:block md:text-2xl font-bold">
             Books_
-            <span className="text-blue-500">Vibes</span>
+            <span className="text-orange-500">Vibes</span>
           </h1>
         </div>
 
@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className="text-gray-700 hover:text-blue-500 transition font-medium"
+                className="text-gray-700 hover:text-orange-500 transition font-medium"
               >
                 {link}
               </a>
@@ -92,7 +92,7 @@ const Navbar: React.FC = () => {
             <div className="flex items-center space-x-2">
               <h1 className="text-xl sm:block md:text-2xl font-bold">
                 Books_
-                <span className="text-blue-500">Vibes</span>
+                <span className="text-orange-500">Vibes</span>
               </h1>
             </div>
             <IoClose
@@ -108,7 +108,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className="text-gray-700 hover:text-blue-500 transition font-medium border-b border-gray-300 pb-2 w-full"
+                className="text-gray-700 hover:text-orange-500 transition font-medium border-b border-gray-300 pb-2 w-full"
               >
                 {link}
               </a>
