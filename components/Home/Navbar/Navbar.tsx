@@ -37,36 +37,39 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <GiBookshelf size={24} className="text-blue-500" />
-          <span className="font-bold text-blue-500 text-lg">Books_Vibes</span>
+          <GiBookshelf size={32} className="text-orange-600" />
+          <h1 className="text-xl sm:block md:text-2xl font-bold">
+            Books_
+            <span className="text-blue-500">Vibes</span>
+          </h1>
         </div>
 
         {/* Desktop Navigation et Boutons */}
         <div className="hidden lg:flex items-center justify-between w-full">
-  {/* Navlinks centrés */}
-  <div className="flex-1 flex justify-center space-x-8">
-    {navLinks.map((link) => (
-      <a
-        key={link}
-        href={`#${link.toLowerCase()}`}
-        className="text-gray-700 hover:text-blue-500 transition font-medium"
-      >
-        {link}
-      </a>
-    ))}
-  </div>
+          {/* Navlinks centrés */}
+          <div className="flex-1 flex justify-center space-x-8">
+            {navLinks.map((link) => (
+              <a
+                key={link}
+                href={`#${link.toLowerCase()}`}
+                className="text-gray-700 hover:text-blue-500 transition font-medium"
+              >
+                {link}
+              </a>
+            ))}
+          </div>
 
-  {/* Boutons */}
-  <div className="flex items-center">
-    <button className="flex items-center bg-orange-500 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-600 transition">
-      <FaCloudArrowDown className="mr-2" />
-      Download
-    </button>
-    <button className="ml-4 bg-gray-500 text-white p-2 rounded-full">
-      <IoMoonOutline size={20} />
-    </button>
-  </div>
-</div>
+          {/* Boutons */}
+          <div className="flex items-center">
+            <button className="flex items-center bg-orange-500 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-600 transition">
+              <FaCloudArrowDown className="mr-2" />
+              Download
+            </button>
+            <button className="ml-4 bg-gray-500 text-white p-2 rounded-full">
+              <IoMoonOutline size={20} />
+            </button>
+          </div>
+        </div>
 
         {/* Icônes pour mobile */}
         <div className="lg:hidden flex items-center space-x-4">
@@ -87,10 +90,10 @@ const Navbar: React.FC = () => {
           {/* En-tête du menu mobile */}
           <div className="flex items-center justify-between w-full mb-8">
             <div className="flex items-center space-x-2">
-              <GiBookshelf size={24} className="text-blue-500" />
-              <span className="font-bold text-blue-500 text-lg">
-                Books_Vibes
-              </span>
+              <h1 className="text-xl sm:block md:text-2xl font-bold">
+                Books_
+                <span className="text-blue-500">Vibes</span>
+              </h1>
             </div>
             <IoClose
               size={28}
@@ -113,10 +116,12 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Bouton Download centré */}
-          <button className="mt-8 flex items-center bg-orange-500 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-600 transition self-center w-[60%]">
-            <FaCloudArrowDown className="mr-2" />
-            Download
-          </button>
+          <div className="w-full flex justify-center mt-8">
+            <button className="flex items-center justify-center bg-orange-500 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-600 transition w-[60%]">
+              <FaCloudArrowDown className="mr-2" />
+              Download
+            </button>
+          </div>
         </div>
       )}
     </div>
