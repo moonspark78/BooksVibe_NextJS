@@ -9,3 +9,17 @@
       /* Vos variables dark theme */
     }
   }
+
+  @theme {
+    --color-navlink-light: #1f2937; /* Couleur des navlinks en mode clair */
+    --color-navlink-dark: #ffffff;  /* Couleur des navlinks en mode sombre */
+  }
+
+  .navlink {
+    color: var(--color-navlink-light);
+  }
+  
+  .dark .navlink {
+    color: var(--color-navlink-dark);
+  }
+  
