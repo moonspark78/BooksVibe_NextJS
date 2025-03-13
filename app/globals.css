@@ -1,2 +1,11 @@
 @import "tailwindcss";
 
+@layer base {
+    :root {
+      /* Vos variables light theme */
+    }
+    
+    [data-theme="dark"] {
+      /* Vos variables dark theme */
+    }
+  }
