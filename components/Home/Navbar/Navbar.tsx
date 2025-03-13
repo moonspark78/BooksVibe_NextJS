@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className="text-gray-700 hover:text-orange-500 transition font-medium"
+                className="text-gray-700 dark:text-white hover:text-orange-500 transition font-medium"
               >
                 {link}
               </a>
