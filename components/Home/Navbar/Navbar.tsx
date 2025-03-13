@@ -7,8 +7,10 @@ import { CgMenu } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
 import ThemeToggle from "@/components/Helper/ThemeToggle";
 
+
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
 
   // Ferme le menu mobile si l'écran dépasse 1024px
   useEffect(() => {
@@ -32,6 +34,8 @@ const Navbar: React.FC = () => {
     "Testimonials",
     "Contact",
   ];
+
+ 
 
   return (
     <div className="transition-all duration-200 h-[12vh] z-[100] w-full">
@@ -88,7 +92,7 @@ const Navbar: React.FC = () => {
           {/* En-tête du menu mobile */}
           <div className="flex items-center justify-between w-full mb-8">
             <div className="flex items-center space-x-2">
-              <h1 className="text-xl sm:block md:text-2xl font-bold">
+              <h1 className="text-xl sm:block md:text-2xl font-bold text-black dark:text-white">
                 Books_
                 <span className="text-orange-500">Vibes</span>
               </h1>
@@ -106,7 +110,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className="text-gray-700 hover:text-orange-500 transition font-medium border-b border-gray-300 pb-2 w-full"
+                className="text-gray-700 dark:text-gray-100 hover:text-orange-500 transition font-medium border-b border-gray-300 pb-2 w-full"
               >
                 {link}
               </a>
