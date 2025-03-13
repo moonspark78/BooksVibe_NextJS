@@ -83,7 +83,8 @@ const Navbar: React.FC = () => {
 
       {/* Menu mobile */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white z-50 flex flex-col items-start px-6 py-4">
+        //<div className="fixed inset-0 bg-white z-50 flex flex-col items-start px-6 py-4">
+        <div className="fixed inset-0 bg-white dark:bg-gray-900 z-50 flex flex-col items-start px-6 py-4">
           {/* En-tête du menu mobile */}
           <div className="flex items-center justify-between w-full mb-8">
             <div className="flex items-center space-x-2">
