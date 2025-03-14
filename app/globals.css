@@ -1,25 +1,16 @@
 @import "tailwindcss";
 
-@layer base {
-    :root {
-      /* Vos variables light theme */
-    }
-    
-    [data-theme="dark"] {
-      /* Vos variables dark theme */
-    }
-  }
+:root {
+  --background-color: #ffffff; /* Fond clair */
+  --text-color: #000000; /* Texte noir */
+}
 
-  @theme {
-    --color-navlink-light: #1f2937; /* Couleur des navlinks en mode clair */
-    --color-navlink-dark: #ffffff;  /* Couleur des navlinks en mode sombre */
-  }
+.dark {
+  --background-color: #121212; /* Fond sombre */
+  --text-color: #ffffff; /* Texte blanc */
+}
 
-  .navlink {
-    color: var(--color-navlink-light);
-  }
-  
-  .dark .navlink {
-    color: var(--color-navlink-dark);
-  }
-  
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
